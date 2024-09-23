@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/*
+    COMP 2681, Final Project
+    Style sheet for consultation_form.html
+
+    Author: Jerome Laranang, T00635622
+    Date:   September 23, 2024
+
+    Filename: zb_form.css
+*/
+
+/* Counselling Form Styles */
+section.form_banner-section {
+    position: relative;
+    margin: 0 auto;
+}
+
+section.form_banner-section img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+div.form_h1-div h1 {
+    margin: 5% auto;
+    text-align: center;
+    font-size: 3em;
+}
+
+section.form-section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+form#cForm {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0 20%;
+    padding: 3% 1%;
+}
+
+/* Fieldset Styles */
+fieldset#personalInfo {
+    background-color: white;
+    -webkit-flex: 1 1 300px;
+    flex: 1 1 300px;
+    padding: 2% 3%;
+    line-height: 2.5em;
+}
+
+div.formRow {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+legend { font-size: 1.5em; }
+
+div.formRow label {
+    display: inline-block;
+    text-align: right;
+    width: 30%;
+    margin-right: 3%;
+    font-size: 1.4em;
+}
+
+/* Input Styles */
+input[type='text'], select {
+    width: 40%;
+    padding: 1% 2%;
+    border: 1px solid lightgrey;
+    font-size: 1.2em;
+}
+
+input[type='checkbox'] { margin-right: 3%; }
+
+div.text-box {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 3% 0 5%;
+}
+
+div.text-box label {
+    margin: 0 0 1% 12%;
+    font-size: 1.4em;
+}
+
+div.text-box textarea {
+    width: 80%;
+    font-size: 1.2em;
+    margin: 0 auto;
+    height: 10em;
+    border: 1px solid lightgrey;
+}
+
+/* Checkbox Styles */
+div.check-box {
+    align-items: flex-start;
+    padding-left: 8%;
+}
+
+div.check-box label { font-size: 1.4em; }
+
+/* Form Button Styles */
+div.buttons {
+    width: 100%;
+    margin-top: 2%;
+}
+
+input[type='submit']:hover, input[type='reset']:hover,
+input[type='button']:hover {
+    background-color: mediumpurple;
+}
+
+input[type='submit'], input[type='reset'],
+input[type='button'] {
+    font-size: 1.4em;
+    padding: 2%;
+    border-radius: 50px;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+/* Input validation styles */
+input:focus, select:focus, textarea:focus {
+    background-color: lightyellow;
+}
+
+input[id~="first-name"]:focus:valid, input#postal-code:focus:valid,
+input#ph-num:focus:valid, input#email:focus:valid {
+    background: lightgreen url(images/check_14025690.png) right /
+        contain no-repeat;
+}
+
+input[id~="first-name"]:focus:invalid, input#postal-code:focus:invalid,
+input#ph-num:focus:invalid, input#email:focus:invalid {
+    background: lightpink url(images/warning_8280473.png) right /
+        contain no-repeat;
+}
+
+/* For mobile phones up to 480px screen width */
+@media only screen and (max-width: 480px) {
+
+    div.formRow {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form#cForm {
+        margin: 0;
+    }
+
+    div.formRow label {
+        text-align: left;
+    }
+
+    input[type='text'], select {
+        width: 100%;
+    }
+}

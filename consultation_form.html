@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    COMP 2681, Final Project
+    Consultation Form
+    Author: Jerome Laranang
+    Date:   September 23, 2024
+
+    Filename: consultation_form.html
+    Link: https://aki927.github.io/
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="mental health, health, medication, yoga, counselling, community"/>
+  <title>zen bridge | A Mental Health Org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="zb_styles.css" rel="stylesheet" media="screen" />
+  <link href="visual.css" rel="stylesheet" media="screen" />
+  <link href="animate.css" rel="stylesheet" media="screen" />
+  <link href="zb_form.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html"><div class="logo">
+      <img class="lotus_flower_logo" src="images/logo.png" alt="zen bridge logo" width="75" height="75"/>
+      <img class="org_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+    </div></a>
+
+    <!-- Navicon replaces unordered list menu for tablets and smartphones -->
+    <a id="navIcon" href="#"><img src="images/mobile_logo.png" alt="navicon" width="512"/></a>
+
+    <ul class="main_menu">
+      <li><a href="#">Programs</a>
+        <ul class="sub_menu">
+          <!-- Zen Programs -->
+          <li id="title-li">
+            <a href="#" class="sub_menu_title">Zen Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_meditation.html">Meditation</a></li>
+              <li><a href="zb_yoga.html">Yoga</a></li>
+            </ul>
+          </li>
+
+          <!-- Bridge Programs -->
+          <li>
+            <a href="#" class="sub_menu_title">Bridge Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_ADHD.html">ADHD</a></li>
+              <li><a href="zb_anxiety.html">Anxiety</a></li>
+              <li><a href="zb_depression.html">Depression</a></li>
+              <li><a href="zb_PTSD.html">PTSD</a></li>
+              <li><a href="zb_grief.html">Grief & Loss</a></li>
+              <li><a href="zb_stress.html">Stress & Burnout</a></li>
+              <li><a href="zb_substance.html">Substance Abuse</a></li>
+              <li><a href="consultation_form.html">Ask us. We're here to listen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="zb_events.html">Events</a></li>
+      <li><a href="index.html#about_description">About</a></li>
+      <li><a href="cross_reference_page.html">Cross-Reference Page</a></li>
+    </ul>
+    <button class="navButton" id="consult-button"><a href="consultation_form.html">Book a Consultation</a></button>
+    <img class="mobile_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+  </nav>
+</header>
+
+<!-- All pages have a large image at the top of the page -->
+<section class="form_banner-section">
+  <img src="images/counselling_photo.png" alt="counselling session">
+</section>
+
+<section class="form-banner-section">
+  <div class="form_h1-div">
+    <h1>Book a Free Consultation</h1>
+  </div>
+</section>
+
+<!--
+  Uses a form to gather personal information. User can click Book a Session button below triggering a post method.
+  First name, Phone number, Postal code, Email, and checkbox are all required fields.
+-->
+<section class="form-section">
+  <form id="cForm" action="https://aki927.github.io/" method="post">
+    <fieldset id="personalInfo">
+      <legend>Personal Information</legend>
+
+      <div class="formRow">
+        <label for="first-name">First Name*</label>
+        <input name="fName" id="first-name" type="text" placeholder="First name" required/>
+      </div>
+
+      <div class="formRow">
+        <label for="last-name">Last Name</label>
+        <input name="lName" id="last-name" type="text" placeholder="Last name"/>
+      </div>
+
+      <div class="formRow">
+        <label for="street-name">Street</label>
+        <input name="street" id="street-name" type="text" placeholder="Street"/>
+      </div>
+
+      <div class="formRow">
+        <label for="city-name">City</label>
+        <input name="city" id="city-name" type="text" placeholder="Toronto"/>
+      </div>
+
+      <div class="formRow">
+        <label for="province-name">Province</label>
+        <input name="province" id="province-name" type="text" placeholder="ON"/>
+      </div>
+
+      <div class="formRow">
+        <label for="postal-code">Postal Code*</label>
+        <input name="poscode" id="postal-code" type="text" placeholder="A1A 1A1"
+               pattern="[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]|[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required/>
+      </div>
+
+      <div class="formRow">
+        <label for="ph-num">Phone Number*</label>
+        <input name="phone" id="ph-num" type="text" placeholder="###-###-####"
+               pattern="\d{3}[\-]\d{3}[\-]\d{4}|\d{10}" inputmode="numeric" maxlength="12" required/>
+      </div>
+
+      <div class="formRow">
+        <label for="email">E-mail*</label>
+        <input name="eMail" id="email" type="text" placeholder="JaneDoe@gmail.com"
+               pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required />
+      </div>
+
+      <div class="formRow">
+        <label for="serv">Type of Program <br/> (select all that apply)</label>
+        <select name="programs" id="serv" size="9" multiple>
+          <option value="ADHD">ADHD</option>
+          <option value="Anxiety">Anxiety</option>
+          <option value="Depression">Depression</option>
+          <option value="PTSD">PTSD</option>
+          <option value="Grief & Loss">Grief & Loss</option>
+          <option value="Stress & Burnout">Stress & Burnout</option>
+          <option value="Substance Abuse">Substance Abuse</option>
+          <option value="Other">Other (please describe below)</option>
+        </select>
+      </div>
+
+      <div class="text-box">
+        <label for="commentBox">Reason for Consultation</label>
+        <textarea name="message" id="commentBox"></textarea>
+      </div>
+
+
+      <div class="check-box">
+        <input name="contactMe" id="contactCB" value="yes" type="checkbox" required />
+        <label for="contactCB">I give my permission to be contacted.</label>
+      </div>
+    </fieldset>
+
+    <div class="buttons">
+      <input type="submit" value="Submit Details"/>
+      <input type="reset" value="Cancel Details"/>
+    </div>
+  </form>
+</section>
+<footer>
+  <p>Zen Bridge &#x2022; A Mental Health Organization (2024)&#169;&nbsp;</p>
+</footer>
+
+</body>
+</html>

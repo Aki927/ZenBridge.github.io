@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*
+    COMP 2681, Final Project
+    Animation style sheet for the spinning lotus flower on
+    the top left of every page.
+
+    Author: Jerome Laranang, T00635622
+    Date:   September 23, 2024
+
+    Filename: animate.css
+*/
+
+/* Key Frames Styles */
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+div.logo:hover > img.lotus_flower_logo {
+    animation: spin 1s infinite linear;
+}

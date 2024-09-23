@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    COMP 2681, Final Project
+    Community Club Events Page
+    Author: Jerome Laranang
+    Date:   September 23, 2024
+
+    Filename: zb_events.html
+    Link: https://aki927.github.io/
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="mental health, health, medication, yoga, counselling, community"/>
+  <title>zen bridge | A Mental Health Org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="zb_styles.css" rel="stylesheet" media="screen"/>
+  <link href="visual.css" rel="stylesheet" media="screen"/>
+  <link href="animate.css" rel="stylesheet" media="screen"/>
+  <link href="zb_form.css" rel="stylesheet" media="screen"/>
+  <script src="zb_events.js" async></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html"><div class="logo">
+      <img class="lotus_flower_logo" src="images/logo.png" alt="zen bridge logo" width="75" height="75"/>
+      <img class="org_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+    </div></a>
+
+    <!-- Navicon replaces unordered list menu for tablets and smartphones -->
+    <a id="navIcon" href="#"><img src="images/mobile_logo.png" alt="navicon" width="512"/></a>
+
+    <ul class="main_menu">
+      <li><a href="#">Programs</a>
+        <ul class="sub_menu">
+          <!-- Zen Programs -->
+          <li id="title-li">
+            <a href="#" class="sub_menu_title">Zen Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_meditation.html">Meditation</a></li>
+              <li><a href="zb_yoga.html">Yoga</a></li>
+            </ul>
+          </li>
+
+          <!-- Bridge Programs -->
+          <li>
+            <a href="#" class="sub_menu_title">Bridge Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_ADHD.html">ADHD</a></li>
+              <li><a href="zb_anxiety.html">Anxiety</a></li>
+              <li><a href="zb_depression.html">Depression</a></li>
+              <li><a href="zb_PTSD.html">PTSD</a></li>
+              <li><a href="zb_grief.html">Grief & Loss</a></li>
+              <li><a href="zb_stress.html">Stress & Burnout</a></li>
+              <li><a href="zb_substance.html">Substance Abuse</a></li>
+              <li><a href="consultation_form.html">Ask us. We're here to listen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="zb_events.html">Events</a></li>
+      <li><a href="index.html#about_description">About</a></li>
+      <li><a href="cross_reference_page.html">Cross-Reference Page</a></li>
+    </ul>
+    <button class="navButton" id="consult-button"><a href="consultation_form.html">Book a Consultation</a></button>
+    <img class="mobile_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+  </nav>
+</header>
+
+<!-- Section with relative positioning. Text and countdown are absolute positioning and sits on top -->
+<section class="form_banner-section">
+  <img src="images/Loughborough_Retreat.png" alt="Loughborough retreat">
+  <div id="events_absolute-div">
+    <h1>Loughborough Retreat</h1>
+    <h2>July 25 - 27, 2025</h2>
+    <h3>Friday to Sunday</h3>
+  </div>
+  <div id="timer_absolute-div">
+    <div id="Loughborough_Countdown">
+      <div><span id="r_Days">58</span><br/>Days</div>
+      <div><span id="r_Hrs">10</span><br/>Hours</div>
+      <div><span id="r_Min">14</span><br/>Minutes</div>
+      <div><span id="r_Sec">48</span><br/>Seconds</div>
+    </div>
+  </div>
+</section>
+
+<!-- Shows community events calendar and system time -->
+<section class="form-banner-section">
+  <div class="form_h1-div">
+    <h1>Community Events</h1>
+  </div>
+  <!-- Shows today's date in the events page -->
+  <div id="today_date">9/18/2024<br/>7:04:12 p.m.</div>
+  <div id="calendar-div">
+    <!-- Google Calendar iframe added so the client has full control in Events -->
+    <iframe id="iframe"
+            src="https://calendar.google.com/calendar/embed?height=800&wkst=1&ctz=America%2FToronto&bgcolor=%230B8043&mode=WEEK&src=ZjIwOGMwZTUxM2I4NTAxMDVlOWEyMzMxMzUxY2M3MzU5ZDJkNTgyMTdhYzY4NWE1OGMxNTI5ZmIwOWIwZWJkN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%237986CB"
+            style="border:solid 1px #777" width="1000" height="700" frameborder="0" scrolling="no"></iframe>
+  </div>
+</section>
+<footer>
+  <p>Zen Bridge &#x2022; A Mental Health Organization (2024)&#169;&nbsp;</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    COMP 2681, Final Project
+    Zen Program for guided meditation audio
+    Author: Jerome Laranang
+    Date:   September 23, 2024
+
+    Filename: zb_meditation.html
+    Link: https://aki927.github.io/
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="mental health, health, medication, yoga, counselling, community"/>
+  <title>zen bridge | A Mental Health Org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="zb_styles.css" rel="stylesheet" media="screen"/>
+  <link href="visual.css" rel="stylesheet" media="screen"/>
+  <link href="animate.css" rel="stylesheet" media="screen"/>
+  <link href="zb_form.css" rel="stylesheet" media="screen"/>
+  <script src="zb_meditation.js" async></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html">
+      <div class="logo">
+        <img class="lotus_flower_logo" src="images/logo.png" alt="zen bridge logo" width="75" height="75"/>
+        <img class="org_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+      </div>
+    </a>
+
+    <!-- Navicon replaces unordered list menu for tablets and smartphones -->
+    <a id="navIcon" href="#"><img src="images/mobile_logo.png" alt="navicon" width="512"/></a>
+
+    <ul class="main_menu">
+      <li><a href="#">Programs</a>
+        <ul class="sub_menu">
+          <!-- Zen Programs -->
+          <li id="title-li">
+            <a href="#" class="sub_menu_title">Zen Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_meditation.html">Meditation</a></li>
+              <li><a href="zb_yoga.html">Yoga</a></li>
+            </ul>
+          </li>
+
+          <!-- Bridge Programs -->
+          <li>
+            <a href="#" class="sub_menu_title">Bridge Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_ADHD.html">ADHD</a></li>
+              <li><a href="zb_anxiety.html">Anxiety</a></li>
+              <li><a href="zb_depression.html">Depression</a></li>
+              <li><a href="zb_PTSD.html">PTSD</a></li>
+              <li><a href="zb_grief.html">Grief & Loss</a></li>
+              <li><a href="zb_stress.html">Stress & Burnout</a></li>
+              <li><a href="zb_substance.html">Substance Abuse</a></li>
+              <li><a href="consultation_form.html">Ask us. We're here to listen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="zb_events.html">Events</a></li>
+      <li><a href="index.html#about_description">About</a></li>
+      <li><a href="cross_reference_page.html">Cross-Reference Page</a></li>
+    </ul>
+    <button class="navButton" id="consult-button"><a href="consultation_form.html">Book a Consultation</a></button>
+    <img class="mobile_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+  </nav>
+</header>
+
+<section class="form_banner-section">
+  <img src="images/meditation_2.png" alt="meditation session">
+</section>
+
+<section class="form-banner-section">
+  <div class="form_h1-div">
+    <h1>Meditation</h1>
+  </div>
+</section>
+
+<!-- Three audio files in the format mp3 and ogg as a backup -->
+<section class="media_section">
+  <div class="media_container-div">
+    <audio id="loving_kindness-audio" controls>
+      <source src="audio/2014-10-08-meditation-loving-kindness-tarabrach_MYKotc9P.mp3" type="audio/mp3"/>
+      <source src="audio/2014-10-08-meditation-loving-kindness-tarabrach_MYKotc9P.ogg" type="audio/ogg"/>
+    </audio>
+    <audio id="breathwork-audio" controls>
+      <source src="audio/ten-breath-practice-benzo_Mz8MG3jg.mp3" type="audio/mp3"/>
+      <source src="audio/ten-breath-practice-benzo_Mz8MG3jg.ogg" type="audio/ogg"/>
+    </audio>
+    <audio id="bodyscan-audio" controls>
+      <source src="audio/body-scan_sVt3KNRa.mp3" type="audio/mp3"/>
+      <source src="audio/body-scan_sVt3KNRa.ogg" type="audio/ogg"/>
+    </audio>
+  </div>
+</section>
+
+<!--
+  Div using grid layout shows different kinds of meditation. User clicks Listen button and only one audio can
+  play/appear at once. User is alerted when changing to a different meditation. User clicks Download and is directed to
+  an external page where they can download the audio.
+-->
+<div class="grid_container-div">
+  <div class="grid_option-div">
+    <div class="grid_image-div">
+      <img src="images/loving_kindness.png" alt="loving-kindness">
+    </div>
+    <div class="grid_description-div">
+      <h2>Loving-Kindness</h2>
+      <p><strong>Loving-kindness meditation (LKM)</strong> is about sending positive wishes to yourself and the people
+        around you. It involves repeating supportive phrases in your mind starting with yourself and
+        then expand to include your friends, family, and, eventually, everyone. It comes from ancient
+        Buddhist traditions of "metta bhavana”. Its been proven to boost your emotional and mental wellbeing. (audio is
+        only a sample)</p>
+    </div>
+    <div class="grid_button-div">
+      <input type="button" class="buttons" id="loving_kindness-button" value="Listen"/>
+      <a href="https://www.tarabrach.com/guided-meditation-loving-kindness/ " target="_blank">
+        <input type="button" value="Download"/>
+      </a>
+    </div>
+  </div>
+  <div class="grid_option-div">
+    <div class="grid_image-div">
+      <img src="images/breathwork.png" alt="breathwork">
+    </div>
+    <div class="grid_description-div">
+      <h2>Ten-Breaths Practice</h2>
+      <p>This exercise involves <strong>ten mindful breaths whenever we encounter
+        something beautiful or meaningful</strong>. Studies in neuroscience show that it takes about thirty
+        seconds to build a new neural-pathway. When we take 10 breaths and recall a positive experiences, we are
+        rewiring our brains. Over time, patterns of happiness begin to flow into our lives regularly. It gives our brain
+        an opportunity to move from its default reaction of fight or flight, to one that appreciates spaciousness. When
+        a delightful instance occurs, savour the experience by giving it 10 full breaths. By paying close attention to
+        these times, we become aware that opportunities for happiness present themselves numerous times every day.
+        (audio is only a sample)</p>
+    </div>
+    <div class="grid_button-div">
+      <input type="button" class="buttons" id="breathwork-button" value="Listen"/>
+      <a href="https://www.mayo.edu/research/labs/mindful-breathing/audio-files " target="_blank">
+        <input type="button" value="Download"/>
+      </a>
+    </div>
+  </div>
+  <div class="grid_option-div">
+    <div class="grid_image-div">
+      <img src="images/body_scan.png" alt="body scan">
+    </div>
+    <div class="grid_description-div">
+      <h2>Body Scan</h2>
+      <p>The <strong>body scan</strong> is a mindfulness meditation practice involving scanning your body for pain,
+        tension, or anything out of the ordinary. It helps you feel more connected to your physical and emotional
+        well-being. This method allows you to become more mindful of your bodily sensations making it easier to find the
+        root-cause if there is something troubling you physically and emotionally. This leads to improved wellness in
+        both the body and mind. (audio is only a sample)</p>
+    </div>
+    <div class="grid_button-div">
+      <input type="button" class="buttons" id="bodyscan-button" value="Listen"/>
+      <a href="https://www.mayo.edu/research/labs/mindful-breathing/audio-files " target="_blank">
+        <input type="button" value="Download"/>
+      </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>Zen Bridge &#x2022; A Mental Health Organization (2024)&#169;&nbsp;</p>
+</footer>
+
+</body>
+</html>

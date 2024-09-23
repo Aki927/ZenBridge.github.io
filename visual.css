@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+/*
+    COMP 2681, Final Project
+    Visual style sheet related to images
+    and pseudo class styles throughout the website.
+
+    Author: Jerome Laranang, T00635622
+    Date:   September 23, 2024
+
+    Filename: visual.css
+*/
+
+/* Navigation styles */
+nav.navbar {
+    box-shadow: rgba(0, 0, 0, .08) 0 4px 10px;
+}
+
+/* Carousel Styles */
+.carousel {
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .carousel_photo,
+.carousel .carousel_photo--hidden {
+    display: none;
+}
+
+.carousel .carousel_photo img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+
+.carousel > div#photo_3 > img {
+    position: relative;
+    object-position: center 10%;
+}
+
+.carousel .carousel_photo--visible {
+    display: block;
+}
+
+.carousel .carousel_buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel_buttons button {
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel .carousel_buttons button#carousel_button_prev {
+    margin-left: 20px;
+}
+
+.carousel .carousel_buttons button#carousel_button_next {
+    margin-right: 20px;
+}
+
+h1#carousel1_absolute-h1 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color: white;
+}
+
+h1#carousel1-h1, h1#carousel2-h1, h1#carousel3-h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 2em;
+    text-shadow: -2px -2px 5px black, 2px -2px 5px black,
+    -2px 2px 5px black, 2px 2px 5px black;
+}
+
+/* Video Frame Styles */
+figure.video_frame {
+    border-style: solid;
+    border-width: 25px;
+    border-image: url("images/photo_grame.png") 50 stretch;
+    margin: 20px auto 0;
+    width: 100%;
+}
+
+figure.video_frame video {
+    display: block;
+    width: 100%;
+}
+
+
+/* Section Styles */
+section.media_section {
+    background-image: url("images/section_wallpaper.png");
+    background-clip: content-box;
+    object-fit: cover;
+}
+
+/* Styles for Bridge Programs */
+p#first_paragraph:first-of-type::first-letter {
+    font-size: 3em;
+    float: left;
+    font-weight: bold;
+    font-style: italic;
+    padding-right: 10px;
+}
+
+div.info_block-div img {
+    width: 400px;
+    float: right;
+    border: 1px dotted grey;
+    margin: 0 0 15px 20px;
+}
+
+aside#bridge_right-aside {
+    background-image: url(images/aside_image.png);
+    background-size: cover;
+    width: 400px;
+    padding: 50px;
+    float: right;
+    border: 1px dotted grey;
+    margin: 0 0 15px 20px;
+    background-clip: padding-box;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+aside#bridge_right-aside p {
+    text-shadow: 2px 2px 3px black;
+    color: white;
+}
+
+div.info_block-div {
+    background-image: url(images/logo4.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 200px;
+}
+
+/* Pseudo Class Styles */
+nav.vertical-nav ul li:last-of-type {
+    list-style: none;
+    background: url(images/next.png) left /
+        contain no-repeat;
+    padding-left: 50px;
+}

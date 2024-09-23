@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    COMP 2681, Final Project
+    Home Page
+    Author: Jerome Laranang
+    Date:   September 23, 2024
+
+    Filename: index.html
+    Link: https://aki927.github.io/
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="mental health, health, medication, yoga, counselling, community"/>
+  <title>zen bridge | A Mental Health Org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="zb_styles.css" rel="stylesheet" media="screen"/>
+  <link href="visual.css" rel="stylesheet" media="screen"/>
+  <link href="animate.css" rel="stylesheet" media="screen"/>
+  <link href="zb_form.css" rel="stylesheet" media="screen"/>
+  <script src="zb_searchProgram.js"></script>
+</head>
+<body>
+<header>
+  <!--
+    Navigation bar shows logo, menu items, and book consultation button. User can hover over programs for a drop-down menu
+   -->
+  <nav class="navbar">
+    <a href="index.html">
+      <div class="logo">
+        <img class="lotus_flower_logo" src="images/logo.png" alt="zen bridge logo" width="75" height="75"/>
+        <img class="org_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+      </div>
+    </a>
+
+    <!-- Navicon replaces unordered list menu for tablets and smartphones -->
+    <a id="navIcon" href="#"><img src="images/mobile_logo.png" alt="navicon" width="512"/></a>
+
+    <ul class="main_menu">
+      <li><a href="#">Programs</a>
+        <ul class="sub_menu">
+          <!-- Zen Programs -->
+          <li id="title-li">
+            <a href="#" class="sub_menu_title">Zen Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_meditation.html">Meditation</a></li>
+              <li><a href="zb_yoga.html">Yoga</a></li>
+            </ul>
+          </li>
+
+          <!-- Bridge Programs -->
+          <li>
+            <a href="#" class="sub_menu_title">Bridge Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_ADHD.html">ADHD</a></li>
+              <li><a href="zb_anxiety.html">Anxiety</a></li>
+              <li><a href="zb_depression.html">Depression</a></li>
+              <li><a href="zb_PTSD.html">PTSD</a></li>
+              <li><a href="zb_grief.html">Grief & Loss</a></li>
+              <li><a href="zb_stress.html">Stress & Burnout</a></li>
+              <li><a href="zb_substance.html">Substance Abuse</a></li>
+              <li><a href="consultation_form.html">Ask us. We're here to listen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="zb_events.html">Events</a></li>
+      <li><a href="#about_description">About</a></li>
+      <li><a href="cross_reference_page.html">Cross-Reference Page</a></li>
+    </ul>
+    <button class="navButton" id="consult-button"><a href="consultation_form.html">Book a Consultation</a></button>
+    <img class="mobile_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+  </nav>
+</header>
+
+<!-- User can control the carousel by clicking the left or right arrows at either end -->
+<div class="carousel">
+  <div class="carousel_photo carousel_photo--visible" id="photo_1">
+    <img src="images/carousel_photo1.png" alt="Girl in summit">
+    <h1 id="carousel1-h1"><strong>Welcome to Zen Bridge!</strong></h1>
+  </div>
+  <div class="carousel_photo" id="photo_2">
+    <img src="images/carousel_photo2.png" alt="Couple exercising">
+    <h1 id="carousel2-h1"><strong>We've built a supportive community.</strong></h1>
+  </div>
+  <div class="carousel_photo" id="photo_3">
+    <img src="images/carousel_photo3.png" alt="Girl using cellphone">
+    <h1 id="carousel3-h1"><strong>Together, we can eliminate mental health stigma.</strong></h1>
+  </div>
+
+  <div class="carousel_buttons">
+    <button id="carousel_button_prev" aria-label="prev"><</button>
+    <button id="carousel_button_next" aria-label="next">></button>
+  </div>
+  <script src="zb_script.js"></script>
+</div>
+
+<section class="about_section">
+  <div class="container">
+    <div id="about_description">
+      <h2>About Us</h2>
+      <p id="first_paragraph">Zen Bridge is a non-for-profit mental health organization committed to helping individuals
+        through their mental
+        health
+        journey.
+        Whether you're someone who has had therapy sessions in the past, or taking your very first step, you've come to
+        the right place.
+        Our <strong>mission</strong> is to provide a compassionate, educative, and engaging space where people can find
+        the resources they need to navigate life’s challenges. Your mental health shouldn't have to wait, so we
+        provide services that allow you to take action right when you need it.</p>
+
+      <aside>
+        <blockquote>&#10077;In a 2019 survey of working Canadians, 75% said they would be reluctant/refuse to disclose a
+          mental illness to an employer or co-worker due to the fear of being judged, and consequences of losing their
+          job.&#10078;
+        </blockquote>
+      </aside>
+
+      <p>The founder created Zen Bridge after facing his own challenges in overcoming a significant problem in his
+        mental health. He recalls the hardest part was taking the first leap due to his fear in speaking to someone
+        about his mental health.</p>
+
+      <p>That's why our <strong>vision</strong> at Zen Bridge is to help eliminate this stigma. We understand that we
+        are all in a different spectrum when it comes to sharing our experiences.
+        That's why we built this inclusive community where people support each other in their mental health journey in a
+        pace that works for them and where support given when it's needed.</p>
+
+      <p>Whether you're looking for guidance for yourself or seeking ways to support others, Zen Bridge is here to help.
+        We believe in the power of community, and our goal is to create an inclusive, non-judgmental space where
+        everyone can find the support they need to thrive. Together, we can break the stigma around mental health and
+        help individuals lead happier, healthier lives.</p>
+
+      <p>Zen Bridge is more than just a resource—it's a place of healing, empowerment, and connection.</p>
+    </div>
+
+    <!-- About Us image that includes a figcaption -->
+    <figure class="framed-photo">
+      <a href="consultation_form.html"><img src="images/counselling.jpg" alt="community members"/></a>
+      <figcaption>Zen Bridge Staff</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Program form uses datalist with options. Clicking 'Learn More' directs to chosen page. -->
+<section class="bridge_program_section">
+  <div class="bridge_program_header">
+    <h1>Bridge Programs</h1>
+    <p>Our Bridge Programs are designed to help individuals bridge the gap in their individual challenges. Whether
+      you're someone who is trying to take their first leap or may have
+      already gone through therapy in the
+      past and are still in the process of healing, you've come to the right place. Check out our Bridge Programs below.
+      We are not limited to
+      the list provided. If you'd like to speak to someone about a different topic, select "Ask Us", and we'd be more
+      than happy to help.</p>
+  </div>
+
+  <form id="programForm">
+    <div class="program_dropdown-div">
+      <label for="bProg">Search a Bridge Program</label>
+      <input name="bridgeProgram" id="bProg" type="text" list="bridge_programs"/>
+      <datalist id="bridge_programs">
+        <option value="ADHD">
+        <option value="Anxiety">
+        <option value="Depression">
+        <option value="PTSD">
+        <option value="Grief & Loss">
+        <option value="Stress & Burnout">
+        <option value="Substance Abuse">
+        <option value="Ask us. We're here to listen">
+      </datalist>
+      <input type="submit" value="Learn More"/>
+    </div>
+  </form>
+</section>
+
+<!-- Zen program uses flex layout. Clicking the button directs to respective page -->
+<section class="zen_program_section">
+  <div class="zen_program_header">
+    <h1>Zen Programs</h1>
+    <p>The Zen Program was designed to empower you to take action in your mental health anywhere and everywhere with
+      our online guided meditation and yoga sessions. Our community members found this especially convenient when done
+      either in the comfort of their home or on the go. We also invite and encourage you to join us in our Community
+      Club events for our in-person meditation and yoga sessions.</p>
+  </div>
+
+  <div class="zen_programs_row">
+    <div class="zen_programs_col">
+      <div class="container_left">
+        <h2>Meditation</h2>
+        <p>This Zen Program is led by renowned practitioners Tara Brach and Roberto P. Benzo and includes ten-breath
+          practice, body scan, and loving kindness meditation.</p>
+        <a href="zb_meditation.html">
+          <button class="navButton">Start Meditation Session</button>
+        </a>
+      </div>
+    </div>
+    <div class="zen_programs_col">
+      <figure class="zen_photo-figure">
+        <img src="images/mediation.jpg" alt="a group meditating"/>
+      </figure>
+    </div>
+  </div>
+
+  <div class="zen_programs_row">
+    <div class="zen_programs_col">
+      <figure class="zen_photo-figure">
+        <img src="images/yannic-laderach-4InW0sYpW-M-unsplash.jpg" alt="a man doing yoga"/>
+      </figure>
+    </div>
+    <div class="zen_programs_col">
+      <div class="text_container_right">
+        <h2>Yoga</h2>
+        <p>Explore our online yoga sessions ranging from beginner to advanced level. Don't forget to check out our
+          Community Club for in-person yoga.</p>
+        <a href="zb_yoga.html">
+          <button class="navButton">Start Yoga Session</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="zen_programs_row">
+    <div class="zen_programs_col">
+      <div class="container_left">
+        <h2>Community Club</h2>
+        <p>Our community is growing! We are locally based in the Greater Toronto Area (GTA). We value a non-judgemental
+          safe space where we can talk openly about mental health.</p>
+        <a href="zb_events.html">
+          <button class="navButton">Join an Event</button>
+        </a>
+      </div>
+    </div>
+    <div class="zen_programs_col">
+      <figure class="zen_photo-figure">
+        <img src="images/run_club.png" alt="a group running together"/>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Article by Tara Brach. Client can make changes to what is said here. -->
+<article id="quotes-article">
+  <p>“Perhaps the biggest tragedy of our lives is that freedom is possible, yet we can pass our years trapped in the
+    same old patterns...We may want to love other people without holding back, to feel authentic, to breathe in the
+    beauty around us, to dance and sing. Yet each day we listen to inner voices that keep our life small.”
+    <br/>― Tara Brach, Radical Acceptance: Embracing Your Life With the Heart of a Buddha</p>
+</article>
+
+<!-- All pages show a footer with company details, except home page where it also shows system time for date last modified. -->
+<footer>
+  <p>Zen Bridge &#x2022; A Mental Health Organization (2024) &#x2022;&nbsp;</p>
+  <p>Last updated: &nbsp;</p>
+  <p id="inline-p"></p>
+</footer>
+
+<!-- Javascript for the footer only. Shows date website was last modified. -->
+<script>
+    const date = new Date(document.lastModified).toString();
+    document.getElementById("inline-p").innerHTML = date;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,733 @@
+@charset "utf-8";
+
+/*
+    COMP 2681, Final Project
+    Style sheet for elements throughout the website.
+
+    Author: Jerome Laranang, T00635622
+    Date:   September 23, 2024
+
+    Filename: zb_styles.css
+*/
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*
+    =================================
+    Body Styles
+    =================================
+ */
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    display: block;
+    min-width: 900px;
+}
+
+/*
+    =================================
+    Navigation Bar Styles
+    =================================
+ */
+nav.navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 999;
+    margin-top: 0;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.logo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+img.lotus_flower_logo, img.org_slogan {
+    display: block;
+}
+
+ul.main_menu {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+ul.main_menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+ul li a {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+nav.navbar li a:link, nav.navbar li a:visited {
+    color: black;
+}
+
+nav.navbar li a:hover, nav.navbar li a:active {
+    color: rebeccapurple;
+}
+
+/* Submenu Styles */
+a.sub_menu_title {
+    margin: 0;
+}
+
+/* Hide submenus by default */
+ul.sub_menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+/* Display submenus on hover */
+ul li:hover > ul.sub_menu {
+    display: inline;
+}
+
+/* Additional styling for submenu links */
+.sub_menu li {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 5px 0;
+}
+
+/* Base styles for the navicon */
+a#navIcon {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+a#navIcon img {
+    width: 50px;
+    height: auto;
+}
+
+button.navButton {
+    background-color: rebeccapurple;
+    color: white;
+    margin-right: 15px;
+    border-radius: 25px;
+    padding: 10px 15px;
+}
+
+button.navButton:hover {
+    background-color: mediumpurple;
+}
+
+button.navButton a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+/*
+    =================================
+    About Us Styles
+    =================================
+ */
+section.about_section {
+    width: 100%;
+    margin: 5% auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+div.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+figure.framed-photo > a > img {
+    width: 400px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    background-color: hsla(100, 90%, 60%, 0.2);
+}
+
+div#about_description {
+    padding: 0 5%;
+}
+
+div#about_description h2, p {
+    color: black;
+}
+
+/*
+    =================================
+    Bridge Program Styles
+    =================================
+ */
+section.bridge_program_section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    background: url('images/company_background-photo.png') no-repeat center center;
+    background-size: cover;
+}
+
+div.bridge_program_header {
+    position: absolute;
+    text-align: center;
+}
+
+div.bridge_program_header h1, div.bridge_program_header p {
+    color: white;
+    text-shadow: -1px -1px 5px black, 1px -1px 5px black,
+    -1px 1px 5px black, 1px 1px 5px black;
+}
+
+div.bridge_program_header h1 {
+    font-size: 3em;
+}
+
+div.bridge_program_header p {
+    font-size: 1.7em;
+    line-height: 1.5em;
+    font-weight: bold;
+    padding: 0 30px;
+}
+
+/* Program Dropdown Styles */
+div.program_dropdown-div {
+    background-color: white;
+    position: absolute;
+    height: 200px;
+    bottom: -15%;
+    width: 50%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid darkslategray;
+    box-shadow: -2px -2px 20px darkslategray, 2px -2px 20px darkslategray,
+    -2px 2px 20px darkslategray, 2px 2px 20px darkslategray;
+}
+
+div.program_dropdown-div label {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+div.program_dropdown-div input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 40%;
+}
+
+/*
+    =================================
+    Zen Program Styles
+    =================================
+ */
+/* Zen Program Header Styles */
+div.zen_program_header {
+    padding-top: 20%;
+    text-align: center;
+}
+
+div.zen_program_header h1 {
+    font-size: 3em;
+}
+
+div.zen_program_header p {
+    font-size: 1.7em;
+    line-height: 1.5em;
+    font-weight: bold;
+    padding: 0 30px;
+}
+
+/* Zen Program Flex Box Styles */
+.zen_programs_row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.zen_programs_col {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+    flex: 1 1 50%;
+    margin: 0;
+    padding: 0;
+    background-color: #7db89f;
+}
+
+.zen_photo-figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zen_photo-figure img {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    object-fit: cover;
+}
+
+.container_left {
+    width: auto;
+    height: auto;
+    align-self: center;
+    box-sizing: border-box;
+    text-align: right;
+    margin: 5%;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.container_left h2 {
+    font-size: 2.625rem;
+    line-height: 2;
+}
+
+.container_left p, .text_container_right p {
+    color: white;
+}
+
+.container_left p {
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+.text_container_right {
+    margin: 5%;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.text_container_right h2 {
+    font-size: 2.625rem;
+    line-height: 2;
+}
+
+.text_container_right p {
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+/*
+    =================================
+    Counselling Services Styles
+    =================================
+ */
+
+div.column_div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* height: 100vh; REMOVED */
+}
+
+aside.bridge_programs-div {
+    width: 23%; /* 1/4 of the page width */
+    padding: 20px;
+    margin-left: 3%;
+    border-right: 1px solid grey;
+}
+
+nav.vertical-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav.vertical-nav li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+nav.vertical-nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rebeccapurple;
+}
+
+nav.vertical-nav li a:link, nav.vertical-nav li a:visited {
+    text-decoration: underline;
+}
+
+nav.vertical-nav li a:hover, nav.vertical-nav li a:active {
+    color: rebeccapurple;
+}
+
+
+.info_block-div {
+    width: 72%; /* 3/4 of the page width */
+    padding: 20px;
+}
+
+
+/*
+    =================================
+    Meditation Page Styles
+    =================================
+ */
+.grid_container-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    max-width: 1400px; /* Set a maximum width */
+    width: 100%; /* Ensure it uses full width available */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding to avoid overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+div.grid_option-div {
+    /* background-color: lightpink; FOR TESTING ONLY */
+    height: auto;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: -2px -2px 5px darkslategray, 2px -2px 5px darkslategray,
+    -2px 2px 5px darkslategray, 2px 2px 5px darkslategray;
+}
+
+div.grid_image-div img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+section.media_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    place-items: center;
+}
+
+section#loving_kindness-audio {
+    padding: 5%;
+}
+
+
+/*
+    =================================
+    Yoga Page Styles
+    =================================
+ */
+
+div.media_container-div video {
+    max-width: 800px;
+}
+
+/*
+    =================================
+    Article Styles
+    =================================
+ */
+article#quotes-article {
+    display: flex;
+    display: -webkit-flex;
+    margin: 5%;
+    justify-content: center;
+    background-color: rgba(125, 184, 159, 0.7);
+    border-radius: 50px;
+}
+
+article#quotes-article p {
+    font-style: italic;
+    font-size: 1.7em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 3%;
+    color: white;
+}
+
+/*
+    =================================
+    Mobile Phone Styles
+    =================================
+ */
+@media only screen and (max-width: 480px) {
+
+    div.container {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    div#about_description {
+        padding: 0 10%;
+    }
+
+    figure.framed-photo > a > img {
+        width: 700px;
+    }
+
+    div.zen_programs_col {
+        width: 100%;
+        margin: 0;
+    }
+
+    div.zen_programs_row {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+    }
+
+    /* Meditation and Yoga page Grid Styles */
+    div.grid_container-div {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    div.grid_option-div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/*
+    =================================
+    Events Page Styles
+    =================================
+ */
+section.form_banner-section {
+    position: relative;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    color: white;
+    text-shadow: -3px -3px 10px black, 3px -3px 10px black,
+    -3px 3px 10px black, 3px 3px 10px black;
+}
+
+
+section.form_banner-section img {
+    width: 100%;
+    /* display: block; TESTING ONLY */
+}
+
+div#events_absolute-div {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+}
+
+div#events_absolute-div > h1 {
+    margin: 0;
+    font-size: 4em;
+}
+
+div#events_absolute-div > h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+div#events_absolute-div > h3 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Google Calendar iFrame Styles */
+div#calendar-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* Countdown Styles */
+div#Loughborough_Countdown {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+}
+
+div#Loughborough_Countdown div {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 1.3em;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    text-shadow: -3px -3px 5px white, 3px -3px 5px white,
+    -3px 3px 5px white, 3px 3px 5px white;
+    margin: 0 5px;
+}
+
+div#Loughborough_Countdown div span {
+    font-size: 2em;
+}
+
+/* System Date Styles */
+div#today_date {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: normal;
+    color: black;
+}
+
+/*
+    =================================
+    Footer Styles
+    =================================
+ */
+footer {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    padding: 3%;
+    margin-top: 20%;
+    background: linear-gradient(to top, mediumpurple, white);
+    object-fit: cover;
+    font-size: 1.2em;
+    color: white;
+}
+
+footer > p {
+    color: black;
+}
+
+p.inline-p {
+    display: inline;
+}
+
+/* ===============================
+   Mobile Devices: 0px to 480px
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+
+    div.logo {
+        display: none;
+    }
+
+    nav.navbar {
+        justify-content: flex-start;
+        font-size: 2em;
+    }
+
+    a#navIcon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Hides the menu until navIcon is clicked */
+    nav.navbar > ul.main_menu {
+        display: none;
+    }
+
+    nav.navbar ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(227, 220, 220);
+    }
+
+    a#navIcon:hover + ul, nav.navbar ul:hover {
+        display: block;
+    }
+
+    nav.navbar ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    img.mobile_slogan {
+        display: block;
+    }
+
+    button#consult-button {
+        margin: 0 30px 5px 30px;
+    }
+}
+
+/* ===============================
+   Tablet Devices: greater than 480px
+   ===============================
+*/
+@media only screen and (min-width: 481px) {
+    a#navIcon {
+        display: none;
+    }
+
+    img.mobile_slogan {
+        display: none;
+    }
+}
+
+/* Style adjustments for tablet screens with 769px max width */
+@media only screen and (max-width: 769px) {
+
+    div.column_div {
+        flex-direction: column;
+    }
+
+    aside.bridge_programs-div, div.info_block-div {
+        width: 100%;
+        margin-right: 0;
+    }
+
+}

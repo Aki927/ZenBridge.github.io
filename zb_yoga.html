@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    COMP 2681, Final Project
+    Zen Program for guided yoga video
+    Author: Jerome Laranang
+    Date:   September 23, 2024
+
+    Filename: zb_yoga.html
+    Link: https://aki927.github.io/
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="mental health, health, medication, yoga, counselling, community"/>
+  <title>zen bridge | A Mental Health Org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="zb_styles.css" rel="stylesheet" media="screen"/>
+  <link href="visual.css" rel="stylesheet" media="screen"/>
+  <link href="animate.css" rel="stylesheet" media="screen"/>
+  <link href="zb_form.css" rel="stylesheet" media="screen"/>
+  <script src="zb_yoga.js" async></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <!-- Lotus flower company logo uses spin animation to rotate, linear ease on hover -->
+    <a href="index.html">
+      <div class="logo">
+        <img class="lotus_flower_logo" src="images/logo.png" alt="zen bridge logo" width="75" height="75"/>
+        <img class="org_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+      </div>
+    </a>
+
+    <!-- Navicon replaces unordered list menu for tablets and smartphones -->
+    <a id="navIcon" href="#"><img src="images/mobile_logo.png" alt="navicon" width="512"/></a>
+
+    <ul class="main_menu">
+      <li><a href="#">Programs</a>
+        <ul class="sub_menu">
+          <!-- Zen Programs -->
+          <li id="title-li">
+            <a href="#" class="sub_menu_title">Zen Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_meditation.html">Meditation</a></li>
+              <li><a href="zb_yoga.html">Yoga</a></li>
+            </ul>
+          </li>
+
+          <!-- Bridge Programs -->
+          <li>
+            <a href="#" class="sub_menu_title">Bridge Program&#9654;</a>
+            <ul class="sub_menu">
+              <li><a href="zb_ADHD.html">ADHD</a></li>
+              <li><a href="zb_anxiety.html">Anxiety</a></li>
+              <li><a href="zb_depression.html">Depression</a></li>
+              <li><a href="zb_PTSD.html">PTSD</a></li>
+              <li><a href="zb_grief.html">Grief & Loss</a></li>
+              <li><a href="zb_stress.html">Stress & Burnout</a></li>
+              <li><a href="zb_substance.html">Substance Abuse</a></li>
+              <li><a href="consultation_form.html">Ask us. We're here to listen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="zb_events.html">Events</a></li>
+      <li><a href="index.html#about_description">About</a></li>
+      <li><a href="cross_reference_page.html">Cross-Reference Page</a></li>
+    </ul>
+    <button class="navButton" id="consult-button"><a href="consultation_form.html">Book a Consultation</a></button>
+    <img class="mobile_slogan" src="images/logo4.png" alt="zen bridge, a mental health organization" height="75"/>
+  </nav>
+</header>
+
+<section class="form_banner-section">
+  <img src="images/yoga.png" alt="yoga session">
+</section>
+
+<section class="form-banner-section">
+  <div class="form_h1-div">
+    <h1>Yoga</h1>
+  </div>
+</section>
+
+<!--
+  Div using grid layout shows different kinds of yoga videos. User clicks Listen button and only one video can
+  play/appear at once. User is alerted when changing to a different yoga session.
+-->
+<div class="grid_container-div">
+  <div class="grid_option-div">
+    <div class="grid_image-div">
+      <img src="images/yoga1.webp" alt="yoga">
+    </div>
+    <div class="grid_description-div">
+      <h2>Beginner</h2>
+      <p><strong>Vinyasa Yoga</strong> focuses on linking yoga poses, or "asanas", together in a flowing way. There are
+        both physical and mental benefits. It is relatively more fast-paced than other types of yoga, making it
+        exceptional for those who want to increase cardiovascular health and build endurance. (video is a demo only)
+    </div>
+    <div class="grid_button-div">
+      <a href="#beginner-video">
+        <input type="button" class="buttons" id="yoga_beginner-button" aria-controls="beginner-video"
+               value="Watch"/></a>
+    </div>
+  </div>
+
+  <div class="grid_option-div">
+    <div class="grid_image-div">
+      <img src="images/yoga3.webp" alt="yoga">
+    </div>
+    <div class="grid_description-div">
+      <h2>Intermediate</h2>
+      <p><strong>Yin Yoga</strong> consists of long-held, poses that typically work your lower body. Some poses are held
+        up to five minutes. Yin is almost entirely passive, although
+        some Yin asanas contain Yang elements. During the asanas, muscles are relaxed to avoid muscle spasm, which can
+        be beneficial as it engages your muscles for longer intervals. (video is a demo only)</p>
+    </div>
+    <div class="grid_button-div">
+      <a href="#intermediate-video">
+        <input type="button" class="buttons" id="yoga_intermediate-button" aria-controls="intermediate-video"
+               value="Watch"/></a>
+    </div>
+  </div>
+
+  <div class="grid_option-div">
+    <div class="grid_image-div">
+      <img src="images/yoga2.webp" alt="yoga">
+    </div>
+    <div class="grid_description-div">
+      <h2>Advanced</h2>
+      <p><strong>Hatha Yoga</strong> usually has physical poses and breathing
+        techniques combined which are executed more slowly and with more static holds than a Vinyasa. Hatha means
+        ‘force’ hence it is defined as ‘the yoga of force. This type of yoga enables us to
+        connect with ourselves physically, mentally, emotionally and spiritually. (video is a demo only)</p>
+    </div>
+    <div class="grid_button-div">
+      <a href="#advanced-video">
+        <input type="button" class="buttons" id="advanced_yoga-button" aria-controls="advanced-video"
+               value="Watch"/></a>
+    </div>
+  </div>
+</div>
+
+<!-- Three video files in the format mp4 and webm as a backup -->
+<section class="media_section">
+  <div class="media_container-div">
+    <figure class="video_frame">
+      <video id="beginner-video" controls>
+        <source src="videos/mixkit-yoga-beginner.mp4" type="video/mp4"/>
+        <source src="videos/mixkit-yoga-beginner.webm" type="video/webm"/>
+        <track kind="captions" label="Beginner_Captions" src="beginner_video_captions.vtt" default/>
+      </video>
+
+      <video id="intermediate-video" controls>
+        <source src="videos/mixkit-yoga-intermediate.mp4" type="video/mp4"/>
+        <source src="videos/mixkit-yoga-intermediate.webm" type="video/webm"/>
+        <track kind="captions" label="Intermediate_Captions" src="intermediate_video_captions.vtt" default/>
+      </video>
+
+      <video id="advanced-video" controls>
+        <source src="videos/mixkit-yoga-advanced.mp4" type="video/mp4"/>
+        <source src="videos/mixkit-yoga-advanced.webm" type="video/webm"/>
+        <track kind="captions" label="Advanced_Captions" src="advanced_video_captions.vtt" default/>
+      </video>
+    </figure>
+  </div>
+</section>
+<footer>
+  <p>Zen Bridge &#x2022; A Mental Health Organization (2024)&#169;&nbsp;</p>
+</footer>
+
+</body>
+</html>
