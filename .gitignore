@@ -1,0 +1,6 @@
+audio/
+video/
+.DS_Store
+*.log
+*.zip
+.idea/
